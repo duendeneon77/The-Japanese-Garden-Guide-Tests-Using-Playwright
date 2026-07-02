@@ -1,0 +1,83 @@
+
+.header-div{
+    min-height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: end;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: black;
+
+    color: rgba(255, 255, 255, 0.67);
+
+    background-image:
+        url('/headerImages/toromobile1.png'),
+        url('/headerImages/momijimobile1.png');
+
+    background-position:
+        left center,
+        right center;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-size:
+        auto 100%,
+        auto 100%;
+
+    border-bottom:1px solid rgba(230, 230, 230, 0.534);
+}
+.header-div img{
+    max-width: 65%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: transparent;
+}
+.header-div .topbar{
+    min-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header-div img{max-width: 40%;}
+    
+.header-div img{
+    opacity: 0.80;
+}
+
+}
+@media (min-width: 1440px) {
+.header-div{min-height: 20rem;}
+.header-div img{max-width: 60%;}
+    
+.header-div img{
+    opacity: 0.80;
+}
+
+}
+
+@media (min-width: 2560px) {
+.header-div{min-height: 30rem;}
+.header-div img{max-width: 60%;}
+    
+.header-div img{
+    opacity: 0.80;
+}
+
+}
+
+@media (min-width: 2560px) {
+.header-div{min-height: 35rem;}
+.header-div img{
+    max-width: 60%;
+    min-width: 40%;
+}
+    
+.header-div img{
+    opacity: 0.80;
+}
+}

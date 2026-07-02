@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(35, 35, 35);
+}
+h2{
+  background-color: transparent;
+  
+}
+p{background-color: transparent;}

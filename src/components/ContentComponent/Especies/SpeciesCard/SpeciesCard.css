@@ -1,0 +1,56 @@
+.specieCard{
+    display: grid;
+    justify-content: flex-start ;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.812);
+    margin-bottom: 1rem;
+    grid-template-rows: 5rem 5rem;
+    grid-template-columns: 8rem 1fr;
+    grid-template-areas: "image tittle" "image link";
+
+}
+
+.specieCard img{
+    display: block;
+    object-fit: cover;
+    width: 8rem;
+    max-height: 10rem;
+    overflow: hidden; 
+    min-height: 10rem;
+    grid-area: image;
+
+}
+.specieCard h2{
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.674);
+    padding: 0.5rem;
+    grid-area: tittle;
+}
+.specieCard a{
+    align-self: flex-end;
+    justify-self: flex-end;
+    padding: 0.5rem;
+    grid-area: link;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.757);
+    margin: 1rem;
+}
+.specieCard:hover{
+    background-color: rgba(251, 251, 251, 0.88);
+}
+
+@media (min-width: 768px) {
+    .specieCard{
+        margin-left: 15%;
+        margin-right: 15%;
+        font-size: 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.501);
+    }
+    .specieCard h2{
+        font-size: 1.8rem;
+        padding-left: 10%;
+        padding-top: 2rem;
+    }
+
+}

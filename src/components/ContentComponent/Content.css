@@ -1,0 +1,55 @@
+.contentHome-div{
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.785);
+    border-top:1px solid rgba(230, 230, 230, 0.534);
+    border-bottom:1px solid rgba(230, 230, 230, 0.534);
+    padding-top:1rem ;
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 100;
+     flex: 1;
+     margin-top: 0.3rem;
+     margin-bottom: 0.3rem;
+    
+}
+.contentHome-div h1{
+    font-weight: 100;
+    font-size: 2rem;
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 3rem;
+    
+}
+.contentHome-div #goBack{
+    background-color: transparent;
+    text-decoration: none;
+    color: rgba(237, 238, 239, 0.688);
+    text-align: end;
+    padding-right: 0rem;
+    margin-bottom: 1.5rem;
+}
+.contentHome-div #goBack:hover{
+    color: rgb(237, 238, 239);
+}
+
+.goBackLink{
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+
+    color: rgba(255, 255, 255, 0.741);
+
+    margin-left: auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .contentHome-div{
+        padding-bottom: 3.5rem;
+
+    }
+
+}

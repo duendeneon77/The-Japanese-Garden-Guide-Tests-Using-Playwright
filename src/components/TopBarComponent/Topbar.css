@@ -1,0 +1,123 @@
+#topbar-div{
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    justify-content: space-between;
+    background-color:transparent;
+    padding: 0 2% 0.3rem 2%;
+    
+}
+button{
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 10rem;
+
+    min-width: 4.7rem;
+    max-width: 10rem;
+
+    padding: 0.2rem 0 0.2rem 0;
+    background-color: rgba(255, 255, 255, 0.228);
+    color: rgba(255, 255, 255, 0.877);
+    border: 1px solid rgba(255, 255, 255, 0.394);
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+#topbar-div button{
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 4.9rem;
+
+    width: 100%;
+    max-width: 10rem;
+    min-width: 4.9rem;
+
+    padding: 0.2rem 0;
+
+    font-family: "Zen Old Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+#topbar-div button:hover{
+    background-color: rgba(255, 255, 255, 0.402);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btndrop{
+    background-color: rgba(255, 255, 255, 0.888);
+    color: black;
+    padding-top:1rem!important;
+    padding-bottom:1rem!important;
+
+}
+.menu button:hover{
+    background-color: rgba(255, 255, 255, 0.954)!important;
+}
+
+a{
+    background-color: transparent;
+}
+
+#topbar-div{
+    position: relative;
+    overflow: visible;
+}
+
+.menu-container{
+    position: relative;
+    overflow: visible;
+}
+.menu-container{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 4.9rem;
+
+    min-width: 4.9rem;
+    max-width: 10rem;
+}
+
+.menu{
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    z-index: 9999;
+
+    background: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .btndrop{
+    padding-top:0.5rem!important;
+    padding-bottom:0.5rem!important;
+}
+
+
+}
+@media (min-width: 1024px) {
+    #topbar-div button{
+    font-size: 1rem!important;
+}
+
+    #topbar-div{
+    
+        justify-content: space-around;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+}

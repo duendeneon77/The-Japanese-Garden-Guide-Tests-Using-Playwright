@@ -1,0 +1,259 @@
+[{
+    "id": "sakura",
+    "titulo": "Cerejeira / Sakura",
+    "tipo": "Caducifolia",
+    "cor": "rosa, branca",
+    "crescimento": "moderado a rápido",
+    "tamanho": "grande",
+    "nomeCientifico": "Prunus",
+    "imagem": "/speciesImages/sakura.png",
+    "arquivo": [
+  {
+    "tipo": "paragrafo",
+    "texto": "As cerejeiras, conhecidas no Japão como sakura, ocupam um lugar especial na cultura japonesa. Muito além de árvores ornamentais, elas representam a beleza efêmera da vida, um conceito profundamente ligado à filosofia japonesa. Suas flores surgem em abundância por um curto período e desaparecem rapidamente, simbolizando a transitoriedade da existência e a importância de apreciar cada momento."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "A tradição de contemplar as flores das cerejeiras é chamada de hanami. Praticada há mais de mil anos, ela reúne famílias, amigos e colegas de trabalho sob as árvores floridas para piqueniques e celebrações. Durante a primavera, parques, templos e margens de rios se tornam pontos de encontro onde milhares de pessoas observam a breve floração das sakuras."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Existem centenas de variedades de cerejeiras ornamentais. Entre elas está a Yukiwari-zakura, conhecida por florescer relativamente cedo e apresentar boa resistência ao frio. Outra variedade importante é a Okinawa-zakura, originária da região subtropical de Okinawa, famosa por sua adaptação a invernos amenos e temperaturas mais elevadas."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "A cerejeira-chorão, conhecida como Shidare-zakura, é uma das mais apreciadas pelos japoneses. Seus galhos arqueados formam cascatas de flores que criam um efeito visual elegante e delicado. Muitas árvores centenárias dessa variedade são consideradas patrimônios culturais e atraem visitantes durante a primavera."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Quando se trata de adaptação climática, a Okinawa-zakura costuma apresentar melhor desempenho em regiões de inverno suave e clima mais quente. Já variedades tradicionais encontradas no norte do Japão, como algumas formas de Yamazakura e Oyamazakura, toleram temperaturas mais baixas e são mais adequadas para regiões frias."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "No folclore japonês, as cerejeiras aparecem frequentemente associadas a espíritos, divindades da natureza e histórias sobre a passagem do tempo. Algumas lendas afirmam que as flores seriam habitadas por espíritos protetores, enquanto outras relacionam a floração ao retorno da fertilidade da terra após o inverno."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "A época de floração varia conforme a região. No hemisfério norte, especialmente no Japão, a temporada normalmente começa entre janeiro e fevereiro em Okinawa, avança pelo sul do país em março e atinge regiões centrais e setentrionais entre abril e maio. Esse avanço gradual é conhecido como 'frente das flores de cerejeira', ou sakura zensen."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "No hemisfério sul, onde as estações são invertidas, a floração geralmente ocorre entre agosto e outubro. Em regiões do Brasil com inverno mais definido, algumas variedades conseguem florescer de forma satisfatória, especialmente quando recebem o período de frio necessário para quebrar a dormência."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Além de seu valor ornamental, as cerejeiras tornaram-se um símbolo internacional da cultura japonesa. Sua presença em jardins, parques e festivais ao redor do mundo demonstra como a beleza passageira das flores continua encantando diferentes povos e gerações."
+  }
+],
+    "galeria": [{"id": "im1","url": "/speciesImages/sakura/saku1.png"},{"id": "im2","url": "/speciesImages/sakura/saku2.png"},{"id": "im3",
+    "url": "/speciesImages/sakura/saku3.png"},{"id": "im4","url": "/speciesImages/sakura/saku4.png"},{"id": "im5","url": "/speciesImages/sakura/saku5.png"},{"id": "im6",
+    "url": "/speciesImages/sakura/saku6.png"},{"id": "im7","url": "/speciesImages/sakura/saku7.png"},{"id": "im8","url": "/speciesImages/sakura/saku8.png"},{"id": "im9",
+    "url": "/speciesImages/sakura/saku9.png"},{"id": "im10","url": "/speciesImages/sakura/saku10.png"}]
+  },
+  {
+    "id": "momiji",
+    "titulo": "Acer Japonês / Momiji",
+    "tipo": "Caducifolia",
+    "cor": "cores quentes",
+    "crescimento": "moderado a rápido",
+    "nomeCientifico": "Acer palmatum",
+    "tamanho": "grande",
+    "imagem": "/speciesImages/momiji.png",
+    "arquivo": [
+  {
+    "tipo": "paragrafo",
+    "texto": "O momiji, nome pelo qual os japoneses tradicionalmente se referem aos bordos ornamentais, ocupa um papel tão importante na cultura japonesa quanto as cerejeiras. Enquanto as sakuras simbolizam a beleza passageira da primavera, o momiji representa a maturidade do ano, a transformação e a contemplação do tempo através das cores do outono. Suas folhas delicadamente recortadas tornam-se vermelhas, alaranjadas, douradas ou púrpuras antes de cair, criando algumas das paisagens mais admiradas do Japão."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "A espécie mais conhecida é o Acer palmatum, chamado de bordo-japonês ou momiji japonês. Originário do Japão, Coreia e partes da China, ele é cultivado há séculos não apenas pela beleza das folhas, mas também pela enorme diversidade de formas e cores. Ao longo do tempo, jardineiros japoneses selecionaram centenas de cultivares diferentes, transformando o momiji em uma das árvores ornamentais mais refinadas do mundo."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Entre as variedades mais famosas encontra-se o 'Bloodgood', conhecido por suas folhas vermelho-escuras que mantêm boa parte da coloração durante o verão. Outra cultivar amplamente apreciada é a 'Osakazuki', considerada uma das mais espetaculares para coloração outonal, produzindo tons vermelhos extremamente intensos. Já a variedade 'Sango-kaku', conhecida como Coral Bark Maple, destaca-se pelos galhos avermelhados que permanecem ornamentais mesmo durante o inverno."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Os cultivares do grupo Dissectum merecem destaque especial. Suas folhas profundamente recortadas criam uma aparência delicada e quase rendada. Variedades como 'Crimson Queen', 'Garnet' e 'Viridis' são frequentemente utilizadas em jardins japoneses por sua forma elegante e pela capacidade de criar pontos focais visualmente leves. Muitas delas apresentam crescimento pendente, lembrando pequenas cascatas vegetais."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Além do Acer palmatum, outras espécies também possuem importância cultural e paisagística. O Acer japonicum apresenta folhas maiores e colorações outonais extremamente vibrantes. Já o Acer shirasawanum, especialmente na cultivar 'Aureum', é valorizado por suas folhas douradas e crescimento relativamente lento, sendo frequentemente utilizado como árvore de destaque em jardins sofisticados."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "A contemplação das folhas de outono recebe no Japão o nome de momijigari, literalmente 'caça aos bordos'. Assim como o hanami celebra as flores das cerejeiras, o momijigari convida as pessoas a visitar montanhas, templos e jardins para observar a transformação das paisagens durante o outono. A prática existe há séculos e aparece registrada em poemas, pinturas e obras literárias desde o período Heian."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Diversos templos e jardins tornaram-se famosos justamente por suas coleções de momijis. Locais como Eikandō, Tōfuku-ji e Kiyomizu-dera, em Kyoto, atraem milhares de visitantes todos os anos durante a temporada de coloração das folhas. Em muitos desses locais, a iluminação noturna destaca os tons vermelhos e dourados, criando cenários considerados entre os mais belos do país."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "No folclore japonês, o momiji frequentemente aparece associado à mudança, à passagem das estações e à reflexão sobre a impermanência da vida. Suas folhas vermelhas simbolizam a beleza que surge justamente no momento da transformação. Essa ideia está profundamente ligada ao conceito de mono no aware, uma sensibilidade estética que reconhece a beleza existente na transitoriedade de todas as coisas."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Diferentemente das cerejeiras, os bordos japoneses não costumam exigir invernos extremamente rigorosos, mas apreciam a presença de estações bem definidas. Muitas variedades desenvolvem suas melhores cores em regiões onde há diferenças claras entre verão e inverno. Em climas excessivamente quentes, algumas cultivares podem apresentar crescimento mais lento ou sofrer queimaduras nas folhas durante períodos de calor intenso."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Em regiões de clima mais ameno ou frio, especialmente onde há boa umidade atmosférica, os momijis costumam desenvolver colorações outonais mais intensas. Por esse motivo, muitas variedades adaptam-se melhor a áreas serranas ou locais com temperaturas moderadas. Ainda assim, cultivares selecionadas podem ser cultivadas com sucesso em regiões mais quentes quando recebem proteção contra o sol forte das horas mais quentes do dia."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Nos jardins japoneses, o momiji é frequentemente utilizado para criar contraste sazonal. Durante a primavera e o verão, suas folhas delicadas oferecem textura e profundidade visual. No outono, tornam-se protagonistas da paisagem. Já no inverno, seus galhos revelam estruturas elegantes que contribuem para a composição do jardim mesmo na ausência da folhagem."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Mais do que uma árvore ornamental, o momiji representa uma das expressões mais completas da estética japonesa. Sua capacidade de mudar radicalmente ao longo do ano transforma-o em um símbolo vivo da passagem do tempo, da renovação constante da natureza e da beleza encontrada nas transformações inevitáveis da vida."
+  }
+],
+    
+    "galeria": [{"id": "im1","url": "/speciesImages/momiji/momi1.png"},{"id": "im2","url": "/speciesImages/momiji/momi2.png"},{"id": "im3",
+    "url": "/speciesImages/momiji/momi3.png"},{"id": "im4","url": "/speciesImages/momiji/momi4.png"},{"id": "im5","url": "/speciesImages/momiji/momi5.png"},{"id": "im6",
+    "url": "/speciesImages/momiji/momi6.png"},{"id": "im7","url": "/speciesImages/momiji/momi7.png"},{"id": "im8","url": "/speciesImages/momiji/momi8.png"},{"id": "im9",
+    "url": "/speciesImages/momiji/momi9.png"},{"id": "im10","url": "/speciesImages/momiji/momi10.png"},{"id": "im11","url": "/speciesImages/momiji/momi11.png"},{"id": "im12",
+    "url": "/speciesImages/momiji/momi12.png"}]
+  },
+{
+    "id": "blackpine",
+    "titulo": "Pinheiro Negro / Kuromatsu",
+    "tipo": "Conifera",
+    "cor": "Verde Escuro",
+    "crescimento": "lento",
+    "nomeCientifico": "Pinus thunbergii",
+    "tamanho": "grande",
+    "imagem": "/speciesImages/kuromatsu.png",
+    "arquivo": [
+  {
+    "tipo": "paragrafo",
+    "texto": "O pinheiro-negro-japonês, conhecido no Japão como Kuromatsu (黒松), é uma das árvores mais emblemáticas da jardinagem japonesa. Seu nome científico é Pinus thunbergii, e sua presença pode ser encontrada em jardins tradicionais, templos, parques históricos e paisagens costeiras de todo o arquipélago. Mais do que uma simples árvore ornamental, o kuromatsu tornou-se um símbolo de resistência, longevidade e perseverança, valores profundamente apreciados na cultura japonesa."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Originário das regiões costeiras do Japão e da Coreia, o pinheiro-negro desenvolveu naturalmente uma grande tolerância ao vento, à salinidade e às condições climáticas adversas. Essa resistência permitiu que ele prosperasse em locais onde muitas outras espécies teriam dificuldade de sobreviver. Ao longo dos séculos, essa característica levou os japoneses a associá-lo à força diante das dificuldades e à capacidade de permanecer firme mesmo em ambientes hostis."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Visualmente, o kuromatsu é facilmente reconhecido por sua casca escura e profundamente fissurada, que se torna cada vez mais marcada com a idade. Suas agulhas verde-escuras, agrupadas em pares, criam uma aparência robusta e elegante. Em exemplares antigos, o tronco adquire formas retorcidas e texturas complexas que são extremamente valorizadas na estética japonesa, especialmente por transmitirem a sensação de passagem do tempo."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Dentro da jardinagem japonesa, o kuromatsu ocupa uma posição de destaque na arte do niwaki, técnica de poda que busca moldar árvores em formas harmoniosas e expressivas. Seus galhos são frequentemente trabalhados durante décadas para criar camadas horizontais e espaços vazios cuidadosamente planejados. O objetivo não é forçar uma forma artificial, mas revelar uma versão idealizada da árvore, como se ela tivesse sido moldada pelo vento e pelas forças da natureza."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "O pinheiro-negro também é considerado uma das espécies mais importantes para a arte do bonsai. Sua resistência, longevidade e capacidade de responder bem às podas tornaram-no uma das árvores favoritas dos mestres bonsaístas. Alguns exemplares cultivados há gerações são considerados verdadeiras obras de arte vivas, sendo preservados por décadas ou até séculos."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "No folclore japonês, os pinheiros possuem uma ligação especial com o mundo espiritual. Acreditava-se que divindades e espíritos poderiam descer à Terra através de árvores antigas, especialmente pinheiros veneráveis. Por essa razão, muitos templos xintoístas mantêm exemplares centenários protegidos e respeitados como elementos sagrados da paisagem."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "O kuromatsu também aparece frequentemente em pinturas, gravuras ukiyo-e e poemas tradicionais. Sua imagem tornou-se associada à estabilidade e à permanência em contraste com elementos mais efêmeros da natureza, como as flores de cerejeira. Enquanto a sakura simboliza a beleza passageira da vida, o pinheiro representa continuidade, resistência e memória."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Diversos jardins históricos do Japão utilizam pinheiros-negros como elementos estruturais da composição. Em muitos casos, as árvores mais antigas tornam-se protagonistas da paisagem, servindo como pontos focais que organizam visualmente todo o espaço ao redor. Algumas delas são podadas e cuidadas há centenas de anos por sucessivas gerações de jardineiros."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Embora o Pinus thunbergii seja a espécie mais conhecida, ele não está sozinho entre os pinheiros japoneses de importância cultural. O Akamatsu (Pinus densiflora), conhecido como pinheiro-vermelho-japonês, também possui grande relevância. Tradicionalmente, o kuromatsu era associado à força e à masculinidade, enquanto o akamatsu simbolizava elegância e delicadeza. Muitas composições paisagísticas utilizavam ambos para criar equilíbrio visual e simbólico."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Do ponto de vista climático, o kuromatsu demonstra excelente adaptação a regiões costeiras, ventosas e ensolaradas. Sua resistência ao calor é superior à de muitas espécies ornamentais japonesas, tornando-o uma opção interessante para regiões subtropicais e até algumas áreas de clima tropical mais ameno. Em contrapartida, também tolera bem invernos frios, desde que não sejam excessivamente extremos."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Durante o crescimento, o pinheiro-negro desenvolve estruturas chamadas velas, brotações alongadas que surgem na primavera. O controle dessas velas através de podas específicas é uma das técnicas mais importantes para manter a densidade da copa e a estética característica da espécie em jardins e bonsais."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Ao longo das quatro estações, o kuromatsu mantém sua folhagem verde, contribuindo para a estrutura permanente da paisagem. Essa característica perene faz dele um elemento essencial nos jardins japoneses, onde muitas outras plantas mudam drasticamente de aparência ao longo do ano. Mesmo durante o inverno, quando flores e folhas caducas desaparecem, o pinheiro continua oferecendo forma, cor e presença."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Mais do que uma árvore ornamental, o kuromatsu representa uma síntese dos valores presentes na estética japonesa. Sua longevidade, resistência e capacidade de envelhecer com beleza transformaram-no em um símbolo vivo da relação entre humanidade, natureza e tempo. Em jardins, templos ou bonsais, ele continua sendo uma das expressões mais respeitadas da tradição paisagística do Japão."
+  }
+],
+    "galeria": [{"id": "im1","url": "/speciesImages/kuromatsu/kuro1.png"},{"id": "im2","url": "/speciesImages/kuromatsu/kuro2.png"},{"id": "im3",
+    "url": "/speciesImages/kuromatsu/kuro3.png"},{"id": "im4","url": "/speciesImages/kuromatsu/kuro4.png"},{"id": "im5","url": "/speciesImages/kuromatsu/kuro5.png"},{"id": "im6",
+    "url": "/speciesImages/kuromatsu/kuro6.png"},{"id": "im7","url": "/speciesImages/kuromatsu/kuro7.png"},{"id": "im8","url": "/speciesImages/kuromatsu/kuro8.png"},{"id": "im9",
+    "url": "/speciesImages/kuromatsu/kuro9.png"},{"id": "im10","url": "/speciesImages/kuromatsu/kuro10.png"}]
+  },
+  {
+    "id": "azalea",
+    "titulo": "Azaléia / Satsuki",
+    "tipo": "Caducifolia, perene",
+    "cor": "brancas/quentes",
+    "crescimento": "lento/moderado",
+    "nomeCientifico": "Rhododendron simsii",
+    "tamanho": "grande",
+    "imagem": "/speciesImages/azalea.png",
+    "arquivo": [
+  {
+    "tipo": "paragrafo",
+    "texto": "As azaléias ocupam um lugar especial nos jardins japoneses, onde são conhecidas principalmente pelo nome Satsuki. Pertencentes ao gênero Rhododendron, essas plantas são valorizadas pela abundância de flores, pela enorme diversidade de cores e pela capacidade de serem moldadas através da poda. Embora muitas pessoas associem os jardins japoneses apenas a árvores como cerejeiras e bordos, as azaléias desempenham um papel igualmente importante na composição da paisagem tradicional."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "O cultivo ornamental das azaléias no Japão possui uma longa história que remonta a vários séculos. Durante o período Edo, o interesse por plantas ornamentais cresceu significativamente entre diferentes classes sociais, e inúmeras variedades começaram a ser selecionadas por suas formas, cores e padrões florais. Com o tempo, surgiram centenas de cultivares desenvolvidas especificamente para jardins e coleções botânicas."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Entre os grupos mais famosos está a Satsuki Azalea, talvez a mais conhecida das azaléias japonesas. Seu nome deriva do antigo calendário japonês, no qual 'Satsuki' correspondia aproximadamente ao período de maio e junho, época em que ocorre sua floração. Essas plantas tornaram-se extremamente populares devido à grande variedade de flores que podem apresentar, incluindo exemplares com pétalas brancas, rosas, vermelhas, roxas e até combinações multicoloridas."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Outro grupo importante é o Kurume Azalea, desenvolvido na cidade de Kurume, na província de Fukuoka. Essas variedades costumam apresentar flores menores, porém em enorme quantidade, formando verdadeiros tapetes coloridos durante a primavera. Seu porte compacto tornou-as especialmente populares em jardins residenciais e projetos paisagísticos urbanos."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "As azaléias são frequentemente utilizadas para criar massas vegetais densas em jardins japoneses. Diferentemente das árvores que servem como elementos estruturais da composição, elas costumam funcionar como camadas intermediárias, conectando visualmente pedras, caminhos, lanternas e árvores maiores. Quando florescem, transformam completamente a paisagem, criando contrastes marcantes com o verde predominante do jardim."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Em muitos jardins históricos do Japão, as azaléias são podadas em formas suaves e arredondadas. Essa técnica não busca criar figuras geométricas rígidas, mas sim sugerir colinas vegetais naturais. O resultado é uma aparência harmoniosa que contribui para a sensação de equilíbrio e tranquilidade tão característica da paisagem japonesa."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Diversos locais tornaram-se famosos pelas suas coleções de azaléias. Um dos exemplos mais conhecidos é o Nezu Shrine, em Tóquio, que realiza anualmente o Tsutsuji Matsuri, o Festival das Azaléias. Durante a floração, milhares de arbustos cobrem o local com tons de rosa, vermelho, branco e púrpura, atraindo visitantes de todo o país."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "No folclore japonês, as flores frequentemente aparecem associadas à renovação da natureza e à chegada das estações mais quentes. Embora as azaléias não possuam o mesmo peso simbólico das cerejeiras, elas são vistas como sinais da transição entre a primavera e o início do verão, marcando um período de crescimento vigoroso e abundância."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "As flores das azaléias também aparecem em poemas tradicionais, pinturas e estampas japonesas. Sua capacidade de produzir grandes massas de cor inspirou artistas ao longo de gerações, especialmente durante períodos em que a observação da natureza era considerada uma importante prática estética e espiritual."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Do ponto de vista botânico, as azaléias apresentam enorme diversidade. Algumas espécies são caducifólias, perdendo as folhas durante parte do ano, enquanto outras são perenes e permanecem verdes durante todas as estações. Essa variedade permite sua utilização em diferentes tipos de jardins e condições climáticas."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Em regiões de clima ameno e úmido, as azaléias geralmente apresentam desenvolvimento vigoroso e florações abundantes. Muitas variedades apreciam solos levemente ácidos e ricos em matéria orgânica, condições semelhantes às encontradas em diversas regiões montanhosas do Japão. Em locais excessivamente secos ou sujeitos a calor intenso, podem exigir irrigação suplementar e alguma proteção contra o sol mais forte."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Além dos jardins tradicionais, as azaléias conquistaram grande importância na arte do bonsai. Especialmente as variedades Satsuki, que respondem muito bem à poda e produzem florações impressionantes mesmo em recipientes pequenos. Alguns exemplares cultivados há décadas tornam-se verdadeiras peças de coleção, admiradas tanto pela estrutura dos troncos quanto pela beleza das flores."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Ao longo das estações, as azaléias ajudam a marcar a passagem do tempo nos jardins japoneses. Sua explosão de flores ocorre durante um período relativamente curto, lembrando aos observadores a natureza transitória da beleza. Essa característica conecta a planta a conceitos estéticos profundamente japoneses, como o mono no aware, a sensibilidade diante da impermanência das coisas."
+  },
+  {
+    "tipo": "paragrafo",
+    "texto": "Mais do que simples arbustos floridos, as azaléias representam uma combinação rara entre exuberância e refinamento. Sua presença nos jardins japoneses demonstra que a beleza não depende apenas de grandes árvores ou paisagens monumentais, mas também da delicadeza de plantas capazes de transformar um espaço inteiro através da cor, da forma e do ritmo das estações."
+  }
+],
+    "galeria": [{"id": "im1","url": "/speciesImages/azaleas/aza1.png"},{"id": "im2","url": "/speciesImages/azaleas/aza2.png"},{"id": "im3",
+    "url": "/speciesImages/azaleas/aza3.png"},{"id": "im4","url": "/speciesImages/azaleas/aza4.png"},{"id": "im5","url": "/speciesImages/azaleas/aza5.png"},{"id": "im6",
+    "url": "/speciesImages/azaleas/aza6.png"},{"id": "im7","url": "/speciesImages/azaleas/aza7.png"},{"id": "im8","url": "/speciesImages/azaleas/aza8.png"},{"id": "im9","url": "/speciesImages/azaleas/aza9.png"}]
+  }
+
+]

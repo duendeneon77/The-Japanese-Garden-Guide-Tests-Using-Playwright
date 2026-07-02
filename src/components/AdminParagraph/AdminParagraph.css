@@ -1,0 +1,38 @@
+#adminDiv{
+    background-color: black;
+    color: rgba(240, 248, 255, 0.752);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Zen Old Mincho", serif;
+    margin-top: 0.3rem;
+    border-top:1px solid rgba(230, 230, 230, 0.534);
+    border-bottom:1px solid rgba(230, 230, 230, 0.534);
+}
+#adminParagraph{
+    background-color: transparent;
+}
+
+#buttonDiv{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+#adminLink{
+    background-color: brown;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.851);
+    background-color: rgba(255, 255, 255, 0.229);
+    font-size: 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.712);
+    
+}
+#adminLink:hover{
+    color:rgba(66, 66, 66, 0.851);
+    background-color: rgba(255, 255, 255, 0.756);
+    
+}
