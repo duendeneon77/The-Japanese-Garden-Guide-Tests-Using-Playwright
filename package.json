@@ -5,6 +5,7 @@
   "homepage": "https://duendeneon77.github.io/The-Japanese-Garden-Guide-Project",
   "type": "module",
   "scripts": {
+    "server": "npx json-server --watch db.json --port 3001",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -18,6 +19,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
@@ -26,6 +29,18 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
+    "json-server": "^1.0.0-beta.15",
     "vite": "^8.0.10"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duendeneon77/The-Japanese-Garden-Guide-Tests-Using-Playwright.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duendeneon77/The-Japanese-Garden-Guide-Tests-Using-Playwright/issues"
   }
 }
