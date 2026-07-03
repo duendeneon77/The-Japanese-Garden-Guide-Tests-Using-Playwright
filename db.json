@@ -1193,5 +1193,6 @@
         "texto": "Nos jardins japoneses, as pontes representam muito mais do que simples caminhos sobre a água. Elas simbolizam mudança, crescimento, conexão e equilíbrio. Ao unir diferentes partes da paisagem, convidam o visitante a refletir sobre sua própria jornada, transformando cada travessia em uma experiência carregada de significado espiritual, filosófico e estético."
       }
     ]
-  }
+  },
+  "$schema": "./node_modules/json-server/schema.json"
 }
