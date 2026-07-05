@@ -22,7 +22,7 @@ export async function doLogin(page){
 
 }
 
-export async function fillSpecieFields(page, {
+export async function fillSpeciesFields(page, speciesName,{
   name = true,
   scientificName = true,
   image = true,
@@ -35,7 +35,7 @@ export async function fillSpecieFields(page, {
 } = {}) {
 
   if (name)
-    await page.locator('#inputSpecieName').fill('Pinheiro Branco');
+    await page.locator('#inputSpecieName').fill(speciesName);
 
   if (scientificName)
     await page.locator('#inputCientificName').fill('Pinus Parviflora');
@@ -57,7 +57,7 @@ export async function fillSpecieFields(page, {
 
   if (text)
     await page.locator('#specieText').fill(
-      'Texto de teste correspondente a espécie do pinheiro branco'
+      `Texto de teste correspondente a espécie do ${speciesName}`
     );
 
   if (gallery) {
@@ -74,17 +74,17 @@ export async function fillSpecieFields(page, {
   }
 }
 
-export async function goToSpeciesPage(page) {
+export async function goToAllSpeciesPage(page) {
   
   await page.getByRole('button', { name: 'Índice' }).click();
 
   await page.getByRole('button', { name: 'Espécies' }).click();
 }
 
-export async function goToSpeciePage(page){
+export async function goToSpeciesPage(page,speciesName){
    await page
   .locator('.specieCard', {
-    has: page.getByRole('heading', { name: 'Pinheiro Branco' })
+    has: page.getByRole('heading', { name: speciesName })
   })
   .first()
   .getByRole('link', { name: 'Ler mais' })
@@ -92,10 +92,10 @@ export async function goToSpeciePage(page){
   
 }
 
-export async function specieExistsAndIsComplete(page){
+export async function speciesExistsAsItsCreated(page,speciesName){
 
   await expect(
-  page.getByRole('heading', { name: 'Pinheiro Branco' }).first()
+  page.getByRole('heading', { name: speciesName }).first()
 ).toBeVisible();
   
 
@@ -125,7 +125,7 @@ export async function specieExistsAndIsComplete(page){
 
   await expect(
     page.locator('.specieParagraph')
-).toContainText('Texto de teste correspondente a espécie do pinheiro branco');
+).toContainText(`Texto de teste correspondente a espécie do ${speciesName}`);
 
 await expect(
     page.locator('.galeryImg').first()
@@ -145,11 +145,13 @@ await page.getByRole('button', { name: '✕' }).click();
 
 }
 
-export async function specieWasNotCreated(page){
+
+
+export async function speciesWasNotCreated(page, speciesName){
 
     await expect(
   page.locator('.specieCard', {
-    has: page.getByRole('heading', { name: 'Pinheiro Branquete' })
+    has: page.getByRole('heading', { name: speciesName })
   })
 ).toHaveCount(0);
 }
@@ -164,18 +166,27 @@ export const requiredFields = [
   { title: 'any color selected', option: { colors: false } },
   { title: 'description', option: { text: false } },
 ];
+export const requiredFieldsToSpeciesEdition = [
+  { title: 'name', option: { name: false } },
+  { title: 'scientific name', option: { scientificName: false } }
+];
 
-export async function cleanUpSpecies(page,name) {
-  
+
+export async function cleanUpSpecies(page, speciesName) {
+
   await page.getByRole('button', { name: 'Editar/Excluir Espécie' }).click();
+
   const search = page.locator('#searchVideo');
 
-  while (true) {
-    await search.fill(name);
+  for (let i = 0; i < 10; i++) {
 
-    const result = page.getByText(name).first();
+    await search.fill(speciesName);
 
-    if (await result.count() === 0) {
+    const result = page.getByText(speciesName).first();
+
+    const isVisible = await result.isVisible().catch(() => false);
+
+    if (!isVisible) {
       break;
     }
 
@@ -188,4 +199,155 @@ export async function cleanUpSpecies(page,name) {
 
   await page.getByRole('link', { name: 'Voltar para o menu' }).click();
 }
+
+  export async function fillEditSpeciesFields(page,editedSpeciesName,{
+  name = true,
+  scientificName = true,
+} = {}){
+
+    await page.locator('input[name="titulo"]').clear();
+  if(name){
+    await page.locator('input[name="titulo"]').fill(editedSpeciesName);
+  }
+  await page.locator('input[name="nomeCientifico"]').clear();
+    if(scientificName){
+    await page.locator('input[name="nomeCientifico"]').fill('Edited Scientific Name');
+  }
+
+
+  await page.locator('input[name="imagem"]').clear();
+  await page.locator('input[name="imagem"]').fill('EditedImage');
+
+
+  await page.locator('input[name="tamanho"][value="pequeno"]').check();
+
+  await page.locator('input[name="crescimento"][value="rapido"]').check();
+
+  await page.locator('input[name="tipo"][value="Caducifolia"]').check();
+
+  await page.locator('input[type="checkbox"][value="cores frias"]').uncheck();
+  await page.locator('input[type="checkbox"][value="branca"]').check();
+
+  await page.locator('textarea.textAreaEditSpecie').clear();
+  await page.locator('textarea.textAreaEditSpecie').fill('Edited Species Description');
+
+
+  const firstGalleryItem = page.locator('.galleryInputContainer').first();
+  await firstGalleryItem.locator('input').fill('Edited Gallery Image');
+
+  const secondGalleryItem = page.locator('.galleryInputContainer').nth(1);
+  await secondGalleryItem.locator('.buttonXeditSpecieGalery').click();
+}
   
+
+  export async function clickToSaveEditedSpecies(page){
+    await page.getByRole('button', { name: 'Salvar' }).click();
+  }
+
+  export async function theSpeciesWasEdited(page, editedSpeciesName){
+
+  await expect(
+  page.getByRole('heading', { name: editedSpeciesName}).first()
+).toBeVisible();
+  
+const img = page.locator('.specieImg');
+
+await expect(img).toHaveAttribute(
+  'alt',
+  `${editedSpeciesName}`
+);
+
+  await expect(
+    page.locator('.cientName')
+).toContainText('Edited Scientific Name');
+
+  await expect(
+    page.getByRole('cell', { name: 'Caducifolia' })
+  ).toBeVisible();
+
+  await expect(
+    page.getByRole('cell', { name: 'branca' })
+  ).toBeVisible();
+
+  await expect(
+    page.getByRole('cell', { name: 'rapido' })
+  ).toBeVisible();
+
+  await expect(
+    page.getByRole('cell', { name: 'pequeno' })
+  ).toBeVisible();
+
+  await expect(
+    page.locator('.specieParagraph')
+).toContainText('Edited Species Description');
+
+const galleryImages = page.locator('.galeryImg');
+
+await expect(galleryImages).toHaveCount(1);
+
+await expect(galleryImages.first()).toHaveAttribute(
+  'alt',
+  `${editedSpeciesName}`
+);
+
+}
+
+  export async function createSpeciesViaUI(page, speciesName, option = {}) {
+  await page.getByRole('button', { name: 'Cadastrar Espécie' }).click();
+
+  await fillSpeciesFields(page, speciesName, option);
+
+  await page.getByRole('button', { name: 'Postar' }).click();
+
+}
+
+
+
+export async function openEditSpecies(page, speciesName) {
+  await page.getByRole('button', { name: 'Editar/Excluir Espécie' }).click();
+
+  await page.locator('#searchVideo').fill(speciesName);
+
+  await page.locator('.searchItem', {
+    hasText: speciesName
+  }).first().click();
+}
+
+export async function openAdminMenu(page) {
+  await page.locator('#adminLink').click();
+}
+export async function closeModal(page) {
+  await page.getByRole('button', { name: 'Fechar' }).click();
+}
+
+export async function successMessage(page){
+  await expect(
+    page.getByText('Espécie criada com sucesso!')
+  ).toBeVisible();
+
+}
+
+export async function errorOfRequiredField(page){
+
+  await expect(
+  page.getByText('Preencha todos os campos obrigatórios antes de continuar')
+).toBeVisible();
+}
+export async function expectEditOrDeleteSpeciesButton(page){
+  await expect(
+          page.getByRole('button', { name: 'Editar/Excluir Espécie' })
+        ).toBeVisible();
+}
+export async function successEditMessage(page){
+  await expect(
+        page.getByText('Espécie atualizada com sucesso')
+        ).toBeVisible();
+}
+export async function editErrorMessageRequiredField(page){
+  await expect(
+            page.getByText('Título e nome científico são obrigatórios')
+            ).toBeVisible();
+}
+export async function clickToGoToAdminMenuButton(page){
+  await page.getByRole('link', { name: 'Menu de Administrador' }).click();
+}
