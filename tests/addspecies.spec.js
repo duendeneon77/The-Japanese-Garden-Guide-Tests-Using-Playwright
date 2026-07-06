@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import {doLogin,errorOfRequiredField,expectEditOrDeleteSpeciesButton,successMessage,createSpeciesViaUI,closeModal,goToAllSpeciesPage,goToSpeciesPage,speciesExistsAsItsCreated,speciesWasNotCreated,requiredFields,cleanUpSpecies,openAdminMenu
+import {doLogin,errorOfRequiredField,expectEditOrDeleteSpeciesButton,successMessage,createSpeciesViaUI,closeModal,goToAllSpeciesPage,goToSpeciesPage,speciesExistsAsItsCreated,speciesWasNotCreated,requiredFields,openAdminMenu
 } from './helpers/speciesHelper.js';
 
 test.describe('Add Species tests', () => {
@@ -22,7 +22,7 @@ test.describe('Add Species tests', () => {
     await openAdminMenu(page);
     await expectEditOrDeleteSpeciesButton(page)
 
-    await cleanUpSpecies(page, speciesName);
+    // await cleanUpSpecies(page, speciesName);
   });
 
 
@@ -42,7 +42,7 @@ test.describe('Add Species tests', () => {
         await speciesWasNotCreated(page, speciesName);
         await openAdminMenu(page);
         await expectEditOrDeleteSpeciesButton(page)
-        await cleanUpSpecies(page, speciesName);
+        // await cleanUpSpecies(page, speciesName);
       });
 
     }

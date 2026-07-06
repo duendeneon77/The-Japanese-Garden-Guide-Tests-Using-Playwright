@@ -91,7 +91,13 @@ export async function goToSpeciesPage(page,speciesName){
   .click();
   
 }
+export async function theSpeciesDoesNotExist(page,speciesName){
+  const specieCard = page.locator('.specieCard', {
+  has: page.getByRole('heading', { name: speciesName })
+});
 
+await expect(specieCard).toHaveCount(0);
+}
 export async function speciesExistsAsItsCreated(page,speciesName){
 
   await expect(
@@ -243,6 +249,24 @@ export async function cleanUpSpecies(page, speciesName) {
   export async function clickToSaveEditedSpecies(page){
     await page.getByRole('button', { name: 'Salvar' }).click();
   }
+  export async function clickToConfirmDelete(page){
+    await expect(page.locator('#modalDeleteSpecie')).toBeVisible();
+    await page.locator('#modalDeleteSpecie').getByRole('button', { name: 'Sim' }).click();
+  }
+  export async function clickToCancelDelete(page){
+    await expect(page.locator('#modalDeleteSpecie')).toBeVisible();
+    await page.locator('#modalDeleteSpecie').getByRole('button', { name: 'Cancelar' }).click();
+  }
+
+  export async function clickToDeleteSpecies(page){
+    await page.getByRole('button', { name: 'Deletar' }).click();
+  }
+  export async function successDeleteMessage(page){
+      await expect(
+    page.getByText('Espécie removida com sucesso!')
+  ).toBeVisible();
+
+  }
 
   export async function theSpeciesWasEdited(page, editedSpeciesName){
 
@@ -350,4 +374,32 @@ export async function editErrorMessageRequiredField(page){
 }
 export async function clickToGoToAdminMenuButton(page){
   await page.getByRole('link', { name: 'Menu de Administrador' }).click();
+}
+
+
+
+export async function cleanUpSpeciesByPrefix(page, prefix) {
+  await page.getByRole('button', { name: 'Editar/Excluir Espécie' }).click();
+
+  const search = page.locator('#searchVideo');
+
+  while (true) {
+    await search.clear();
+    await search.fill(prefix);
+
+    const results = page.locator('.searchItem');
+
+    if (await results.count() === 0) {
+      break;
+    }
+
+    await results.first().click();
+
+    await clickToDeleteSpecies(page);
+    await clickToConfirmDelete(page);
+    await successDeleteMessage(page);
+    await closeModal(page);
+  }
+
+  await page.getByRole('link', { name: 'Voltar para o menu' }).click();
 }

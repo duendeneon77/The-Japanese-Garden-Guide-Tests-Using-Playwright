@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import {doLogin,successMessage,closeModal,createSpeciesViaUI,openEditSpecies,fillEditSpeciesFields,clickToSaveEditedSpecies,theSpeciesWasEdited,goToAllSpeciesPage,goToSpeciesPage,requiredFieldsToSpeciesEdition,speciesExistsAsItsCreated,cleanUpSpecies, successEditMessage, editErrorMessageRequiredField, clickToGoToAdminMenuButton,
+import {doLogin,successMessage,closeModal,createSpeciesViaUI,openEditSpecies,fillEditSpeciesFields,clickToSaveEditedSpecies,theSpeciesWasEdited,goToAllSpeciesPage,goToSpeciesPage,requiredFieldsToSpeciesEdition,speciesExistsAsItsCreated, successEditMessage, editErrorMessageRequiredField, clickToGoToAdminMenuButton, clickToDeleteSpecies, clickToConfirmDelete, successDeleteMessage,theSpeciesDoesNotExist, clickToCancelDelete,
 } from './helpers/speciesHelper.js';
 
 test.describe('Edit or Delete Species tests', () => {
@@ -32,8 +32,8 @@ test.describe('Edit or Delete Species tests', () => {
 
         await clickToGoToAdminMenuButton(page)
 
-        await cleanUpSpecies(page, speciesName);
-        await cleanUpSpecies(page, editedSpeciesName);
+        // await cleanUpSpecies(page, speciesName);
+        // await cleanUpSpecies(page, editedSpeciesName);
     });
 
 
@@ -69,12 +69,57 @@ test.describe('Edit or Delete Species tests', () => {
 
             await clickToGoToAdminMenuButton(page)
 
-            await cleanUpSpecies(page, speciesName);
-            await cleanUpSpecies(page, editedSpeciesName);
+            // await cleanUpSpecies(page, speciesName);
+            // await cleanUpSpecies(page, editedSpeciesName);
         });
         }
     });
 
     //tomorrow- Delete Species
+
+    test('Delete Species Successfully', async ({ page }) => {
+
+        const speciesName =
+        `Pinheiro Branco ${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
+        await createSpeciesViaUI(page, speciesName);
+        await successMessage(page)
+        await closeModal(page)
+
+        await openEditSpecies(page, speciesName);
+
+        await clickToDeleteSpecies(page)
+        await clickToConfirmDelete(page)
+
+        await successDeleteMessage(page)
+        await closeModal(page)
+        await goToAllSpeciesPage(page);
+
+        await theSpeciesDoesNotExist(page,speciesName)
+    });
+
+    test('Click to Delete and Canceling', async ({ page }) => {
+
+        const speciesName =
+        `Pinheiro Branco ${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
+        await createSpeciesViaUI(page, speciesName);
+        await successMessage(page)
+        await closeModal(page)
+
+        await openEditSpecies(page, speciesName);
+
+        await clickToDeleteSpecies(page)
+
+        await clickToCancelDelete(page)
+
+        await goToAllSpeciesPage(page);
+        await goToSpeciesPage(page,speciesName)
+
+        await clickToGoToAdminMenuButton(page)
+
+        // await cleanUpSpecies(page, speciesName);
+
+    });
 
 });
