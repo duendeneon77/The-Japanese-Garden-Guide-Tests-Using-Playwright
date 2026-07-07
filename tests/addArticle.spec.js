@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { doLogin,clickToPublishArticle,closeModal,fillArticleFields, goToPublishArticle, successPublishMessage, theArticleExists,theArticleIsAsItWasCreated, clickOnAdminMenuButton, articleRequiredFields, errorOfArticleRequiredFieldMessage, theArticleWasNotCreated, goToArticlesPageByYourself } from './helpers/articlesHelper.js';
+import { doLogin,clickToPublishArticle,closeModal,fillArticleFields, goToPublishArticle, successPublishMessage, theArticleExists,theArticleIsAsItWasCreated, clickOnAdminMenuButton, articleRequiredFields, errorOfArticleRequiredFieldMessage, goToArticlesPageByYourself, theArticleDoesNotExist } from './helpers/articlesHelper.js';
 
 test.describe('Add Article tests', () => {
 
@@ -34,7 +34,7 @@ test.describe('Add Article tests', () => {
             await errorOfArticleRequiredFieldMessage(page)
             await closeModal(page)
             await goToArticlesPageByYourself(page)
-            await theArticleWasNotCreated(page,articleName)
+            await theArticleDoesNotExist(page,articleName)
             await clickOnAdminMenuButton(page)
 
             })

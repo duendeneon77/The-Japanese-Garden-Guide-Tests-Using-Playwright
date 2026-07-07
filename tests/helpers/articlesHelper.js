@@ -52,8 +52,8 @@ export const articleRequiredFields = [
 
 export async function clickToPublishArticle(page){
     await page.getByRole('button', { name: 'Criar artigo' }).click();
-    
 }
+
 export async function successPublishMessage(page){
 
     await expect(page.getByText('Artigo criado com sucesso!')).toBeVisible();
@@ -73,7 +73,7 @@ export async function theArticleExists(page,articleName){
     .getByRole('link', { name: 'Ler mais' }).click();
 }
 
-export async function theArticleWasNotCreated(page,articleName){
+export async function theArticleDoesNotExist(page,articleName){
     await expect(page.getByRole('heading', { name: 'Artigos' })).toBeVisible();
     await expect(
         page.locator('.card').filter({ has: page.locator('h2', { hasText: articleName }) })
@@ -97,6 +97,8 @@ export async function theArticleIsAsItWasCreated(page,articleName){
     await expect(page.locator('p', { hasText: 'texto do artigo de teste' })).toBeVisible();
 
 }
+
+
 export async function clickOnAdminMenuButton(page){
     await page.locator('#adminLink').click();
 }
@@ -108,6 +110,11 @@ export async function clickToDeleteArticle(page){
 export async function clickToConfirmDeleteArticle(page){
     await expect(page.locator('#modalDeleteArticle')).toBeVisible();
     await page.locator('#modalDeleteArticle').getByRole('button', { name: 'Sim' }).click();
+  }
+
+export async function clickToCancelDeleteArticle(page){
+    await expect(page.locator('#modalDeleteArticle')).toBeVisible();
+    await page.locator('#modalDeleteArticle').getByRole('button', { name: 'Cancelar' }).click();
   }
 export async function successDeleteArticleMessage(page){
     await expect(page.locator('#articleModalBox')).toBeVisible()
@@ -145,3 +152,69 @@ export async function cleanUpArtclesByArticlePrefix(page,articlePrefix){
 await page.getByRole('link', { name: 'Voltar para o menu' }).click();
 
 }
+
+export async function createArticleViaUI(page, articleName, option={}){
+    await goToPublishArticle(page)
+    await fillArticleFields(page,articleName,option)
+    await clickToPublishArticle(page)
+}
+
+export async function goToEditOrDeleteArticle(page){
+    await page.getByRole('button', { name: 'Editar/Excluir Artigo' }).click();
+}
+export async function searchForTheArticle(page, articleName){
+    const search = page.locator('#searchVideo');
+    await search.fill(articleName);
+    const results = page.locator('.searchItem');
+    await results.first().click();
+
+}
+
+export async function fillEditArticleFields(page,editedArticleName,{
+    name= true,
+    text=true
+}={}){
+
+    await page.locator('input[name="titulo"]').fill('');
+
+    if(name){
+        await page.locator('input[name="titulo"]').fill(editedArticleName);
+    }
+
+    await page.locator('input[name="imagem"]').fill('');
+    await page.locator('input[name="imagem"]').fill('edited image url');
+
+    await page.locator('textarea[name="texto"]').fill('');
+    if(text){
+        await page.locator('textarea[name="texto"]').fill('Edited Article Text');
+    }
+}
+export const editArticleRequiredFields = [
+{ title: 'name', option: { name: false } },
+{ title: 'text', option: { text: false } },
+]
+
+export async function clickToSaveArticleEdition(page){
+    await page.getByRole('button', { name: 'Salvar' }).click();
+}
+
+export async function successEditArticleMessage(page){
+    await expect(page.getByText('Artigo atualizado com sucesso!')).toBeVisible();
+}
+
+export async function theaArticleWasEdited(page,editedArticleName){
+
+    
+    await expect(page.locator('h1', { hasText: editedArticleName })).toBeVisible();
+
+    await expect(page.locator(`img[alt="${editedArticleName}"]`)).toBeVisible();
+
+    await expect(page.locator('p', { hasText: 'Edited Article Text' })).toBeVisible();
+
+}
+
+export async function errorEditArticleRequiredFieldsMessage(page){
+    await expect(page.getByText('É necessário preencher o título e o texto do artigo para salvar')).toBeVisible();
+
+}
+
