@@ -109,7 +109,7 @@ export async function clickOnAdminMenuButton(page){
     await page.locator('#adminLink').click();
 }
 
-export async function clickToEditOrDeleteVideo(page){
+export async function clickToDeleteVideo(page){
     await page.getByRole('button', { name: 'Deletar' }).click();
 }
 
@@ -125,7 +125,10 @@ export async function successDeleteVideoMessage(page){
     page.getByText('Vídeo deletado com sucesso!')
     ).toBeVisible();
 }
+export async function clickToEditOrDeleteVideo(page){
+    await page.getByRole('button', { name: 'Editar/Deletar Vídeo' }).click();
 
+}
 
 export async function cleanUpVideosByVideosPrefix(page,videoPrefix){
 
@@ -145,7 +148,7 @@ export async function cleanUpVideosByVideosPrefix(page,videoPrefix){
 
     await results.first().click();
 
-    await clickToEditOrDeleteVideo(page)
+    await clickToDeleteVideo(page)
     await clickToConfirmDeleteVideo(page)
     await successDeleteVideoMessage(page)
     await closeModal(page)
@@ -154,3 +157,81 @@ export async function cleanUpVideosByVideosPrefix(page,videoPrefix){
 await page.getByRole('link', { name: 'Voltar para o menu' }).click();
 
 }
+
+  export async function createVideoViaUI(page, videoName, option = {}) {
+
+    await goToAddVideoPage(page)
+    await fillVideoFields(page, videoName,option)
+    await clickToPostVideo(page)
+
+}
+
+export async function searchForTheVideo(page, videoName){
+    const search = page.locator('#searchVideo');
+    await search.fill(videoName);
+    const results = page.locator('.searchItem');
+    await results.first().click();
+}
+
+export async function fillEditVideosFields(page, editedVideoName, {
+    name=true,
+    link=true}={}){
+    
+    await page.locator('input[name="titulo"]').fill('');
+    if(name){
+        await page.locator('input[name="titulo"]').fill(editedVideoName);
+    }
+    
+    await page.locator('textarea[name="description"]').fill('');
+    await page.locator('textarea[name="description"]').fill('Edited Video Description');
+
+    await page.locator('input[name="embed"]').fill('');
+    if(link){
+    await page.locator('input[name="embed"]').fill('https://www.youtube.com/embed/39oEAPqg3eI?si=vG-i927NdBcw6hw1');
+    }
+
+}
+
+export async function clickToSaveVideoEdit(page){
+    await page.getByRole('button', { name: 'Salvar' }).click();
+}
+
+export async function successEditVideoMessage(page){
+    await expect(page.getByText('Vídeo atualizado com sucesso!')).toBeVisible();
+}
+
+export async function theVideoWasEdited(page,editedVideoName){
+
+    const videoDiv = page.locator('.videoDiv').filter({
+    hasText: editedVideoName
+    });
+
+    await expect(videoDiv).toBeVisible();
+
+    await expect(
+    videoDiv.locator('iframe[src*="39oEAPqg3eI"]')
+    ).toBeVisible();
+
+    await expect(
+    videoDiv.getByText('Edited Video Description')
+    ).toBeVisible();
+
+}
+
+export async function clickToReturnToMenu(page){
+    await page.getByRole('link', { name: 'Voltar para o menu' }).click();
+}
+
+
+export const editVideoRequiredFields = [
+{ title: 'name', option: { name: false } },
+{ title: 'link', option: { link: false } }]
+
+export async function errorEditVideoRequiredFieldsMessage(page){
+    await expect(page.getByText('É necessário preencher o título e o código do vídeo antes de salvar')).toBeVisible();
+}
+export async function clickToCancelDeleteVideo(page){
+    await expect(page.locator('#modalDeleteVideo')).toBeVisible();
+    await page.locator('#modalDeleteVideo').getByRole('button', { name: 'Cancelar' }).click();
+  }
+
