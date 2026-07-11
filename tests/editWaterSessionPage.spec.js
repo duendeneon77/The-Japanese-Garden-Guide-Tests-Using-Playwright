@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import {doLogin, editingWaterSessionPageText, goToAdminPage, goToEditWaterSessionPage, saveWaterSessionPage, theWaterSessionPageWasChanged} from './helpers/editWaterSessionHelper'
-test.describe.only('Water Session tests', () => {
+test.describe('Water Session tests', () => {
 
     test.beforeEach(async ({ page }) => {
         await doLogin(page)

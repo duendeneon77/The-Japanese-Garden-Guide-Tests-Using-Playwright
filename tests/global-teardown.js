@@ -8,6 +8,8 @@ import { cleanUpVideosByVideosPrefix } from './helpers/videosHelper.js';
 import { cleanUpHistoryPage } from './helpers/historyPageHelper.js';
 import { cleanUpProjectPage } from './helpers/projectPageHelper.js';
 import { cleanUpWaterSessionPage } from './helpers/editWaterSessionHelper.js';
+import { cleanUpBridgesSessionPage, cleanUpToroSessionPage } from './helpers/editBridgesSessionHelper.js';
+import { cleanUpRocksSessionPage } from './helpers/editRocksSessionHelper.js';
 
 export default async function globalTeardown() {
   const browser = await chromium.launch();
@@ -21,6 +23,9 @@ export default async function globalTeardown() {
   await cleanUpHistoryPage(page)
   await cleanUpProjectPage(page)
   await cleanUpWaterSessionPage(page)
+  await cleanUpToroSessionPage(page)
+  await cleanUpBridgesSessionPage(page)
+  await cleanUpRocksSessionPage(page)
 
   await browser.close();
 
