@@ -4,8 +4,8 @@ import {
   // cleanUpSpeciesByPrefix
 } from './helpers/speciesHelper.js';
 import { cleanUpSpeciesByPrefix } from './api/speciesApi.js';
-import { cleanUpArtclesByArticlePrefix } from './helpers/articlesHelper.js';
-import { cleanUpVideosByVideosPrefix } from './helpers/videosHelper.js';
+// import { cleanUpArtclesByArticlePrefix } from './helpers/articlesHelper.js';
+// import { cleanUpVideosByVideosPrefix } from './helpers/videosHelper.js';
 import { cleanUpHistoryPage } from './helpers/historyPageHelper.js';
 import { cleanUpProjectPage } from './helpers/projectPageHelper.js';
 import { cleanUpWaterSessionPage } from './helpers/editWaterSessionHelper.js';
@@ -27,6 +27,8 @@ export default async function globalTeardown() {
 
   await cleanUpVideosByPrefix('Test-Video')
   // await cleanUpVideosByVideosPrefix(page,'Test-Video')
+
+  //------------Only the sections listed above can be cleaned up through the API.---------
   
   await cleanUpHistoryPage(page)
   console.log('clean up history')
