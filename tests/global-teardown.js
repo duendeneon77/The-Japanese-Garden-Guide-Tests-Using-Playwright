@@ -1,8 +1,9 @@
 import { chromium } from 'playwright';
 import {
   doLogin,
-  cleanUpSpeciesByPrefix
+  // cleanUpSpeciesByPrefix
 } from './helpers/speciesHelper.js';
+import { cleanUpSpeciesByPrefix } from './api/speciesApi.js';
 import { cleanUpArtclesByArticlePrefix } from './helpers/articlesHelper.js';
 import { cleanUpVideosByVideosPrefix } from './helpers/videosHelper.js';
 import { cleanUpHistoryPage } from './helpers/historyPageHelper.js';
@@ -11,19 +12,22 @@ import { cleanUpWaterSessionPage } from './helpers/editWaterSessionHelper.js';
 import {cleanUpToroSessionPage} from './helpers/editToroSessionHelper.js'
 import { cleanUpBridgesSessionPage } from './helpers/editBridgesSessionHelper.js';
 import { cleanUpRocksSessionPage } from './helpers/editRocksSessionHelper.js';
+import { cleanUpArticlesByPrefix } from './api/articlesApi.js';
+import { cleanUpVideosByPrefix } from './api/videosApi.js';
 
 export default async function globalTeardown() {
   const browser = await chromium.launch();
   const page = await browser.newPage();
 
   await doLogin(page);
+  await cleanUpSpeciesByPrefix('Pinheiro Branco');
+  // await cleanUpSpeciesByPrefix(page, 'Pinheiro Branco');
+  await cleanUpArticlesByPrefix('Test-Article')
+  // await cleanUpArtclesByArticlePrefix(page,'Test-Article')
 
-  await cleanUpSpeciesByPrefix(page, 'Pinheiro Branco');
-  console.log('clean species')
-  await cleanUpArtclesByArticlePrefix(page,'Test-Article')
-  console.log('clean up articles')
-  await cleanUpVideosByVideosPrefix(page,'Test-Video')
-  console.log('clean up videos')
+  await cleanUpVideosByPrefix('Test-Video')
+  // await cleanUpVideosByVideosPrefix(page,'Test-Video')
+  
   await cleanUpHistoryPage(page)
   console.log('clean up history')
   await cleanUpProjectPage(page)
