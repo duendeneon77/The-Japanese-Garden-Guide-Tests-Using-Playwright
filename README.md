@@ -1,16 +1,37 @@
-# React + Vite
+# The Japanese Garden Guide - Testes com Playwright
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de automação de testes end-to-end desenvolvido para o projeto **The Japanese Garden Guide** utilizando **Playwright**.
 
-Currently, two official plugins are available:
+O objetivo é validar as principais funcionalidades da aplicação através de testes automatizados, criando diferentes cenários de uso e verificando o comportamento da aplicação.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧪 Tecnologias utilizadas
 
-## React Compiler
+- Playwright
+- JavaScript
+- Node.js
+- Vite
+- React
+- Git
+- GitHub Actions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔎 Testes automatizados
 
-## Expanding the ESLint configuration
+Os testes foram desenvolvidos para validar diferentes funcionalidades da aplicação, incluindo:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Login
+- Cadastro e gerenciamento de espécies
+- Validação de informações
+- Navegação entre páginas
+- Interações com elementos da aplicação
+- Testes de diferentes cenários de uso
+
+## 📁 Estrutura do projeto
+
+```text
+├── public/
+├── src/
+├── tests/
+├── db.json
+├── playwright.config.js
+├── package.json
+└── vite.config.js
